@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Simple and fast histogramming in python via pybind11 and OpenMP
+Summary: Simple and fast histogramming in Python via pybind11 and OpenMP
 
 Simple and fast histogramming with a NumPy like API, built on pybind11 and
 accelerated with OpenMP.
