@@ -10,7 +10,7 @@ source:
   sha256: 50c894f7a4739d13c2828be5ae797ef2808e23b48fe36c774bb8276bc7cae935
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -43,7 +43,7 @@ test:
     - py.test
 
 about:
-  home: http://github.com/drdavis/{{ name }}
+  home: http://github.com/douglasdavis/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -52,8 +52,8 @@ about:
     Simple and fast histogramming with a NumPy like API, built on pybind11 and
     accelerated with OpenMP.
   doc_url: https://{{ name }}.readthedocs.io/
-  dev_url: https://github.com/drdavis/{{ name }}
+  dev_url: https://github.com/douglasdavis/{{ name }}
 
 extra:
   recipe-maintainers:
-    - drdavis
+    - douglasdavis
