@@ -1,7 +1,7 @@
 About pygram11
 ==============
 
-Home: http://github.com/drdavis/pygram11
+Home: http://github.com/douglasdavis/pygram11
 
 Package license: MIT
 
@@ -18,7 +18,7 @@ Current build status
 
 
 <table>
-    
+
   <tr>
     <td>Azure</td>
     <td>
@@ -179,5 +179,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@drdavis](https://github.com/drdavis/)
-
+* [@douglasdavis](https://github.com/douglasdavis/)
