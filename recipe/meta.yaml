@@ -10,7 +10,7 @@ source:
   sha256: de872baef0213e4101daf7d46baaac620b7efd0bbc427d662db72303304a24b3
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -24,7 +24,6 @@ requirements:
     - python
     - pip
     - setuptools >=39.0.1
-    - pybind11 >=2.2
     - numpy >=1.12
   run:
     - llvm-openmp  # [osx]
@@ -40,7 +39,7 @@ test:
   imports:
     - {{ name }}
   commands:
-    - py.test
+    - pytest --ignore=extern
 
 about:
   home: http://github.com/douglasdavis/{{ name }}
