@@ -23,8 +23,8 @@ requirements:
     - llvm-openmp  # [osx]
     - python
     - pip
-    - setuptools >=39.0.1
-    - numpy >=1.12
+    - setuptools >=40.1
+    - numpy >=1.14
   run:
     - llvm-openmp  # [osx]
     - python
