@@ -23,8 +23,8 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - llvm-openmp # [osx]
-    - libgomp # [linux]
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
   run:
     - python
     - numpy
