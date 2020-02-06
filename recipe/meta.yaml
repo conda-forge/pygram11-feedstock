@@ -12,28 +12,27 @@ source:
 build:
   number: 0
   skip: True  # [win or py2k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - llvm-openmp  # [osx]
   host:
-    - llvm-openmp  # [osx]
     - python
     - pip
-    - setuptools >=40.1
-    - numpy >=1.14
-  run:
+    - setuptools
+    - numpy
     - llvm-openmp  # [osx]
+    - libgomp  # [linux]
+  run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy
 
 test:
   requires:
     - pytest
-    - numpy >=1.12
+    - numpy
   source_files:
     - tests
   imports:
