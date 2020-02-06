@@ -13,6 +13,7 @@ bld.bat text eol=crlf
 .drone.yml linguist-generated=true
 .github/* linguist-generated=true
 .travis/* linguist-generated=true
+.scripts linguist-generated=true
 .appveyor.yml linguist-generated=true
 .gitattributes linguist-generated=true
 .gitignore linguist-generated=true
