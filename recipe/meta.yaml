@@ -18,6 +18,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - llvm-openmp  # [osx]
   host:
     - python
     - pip
@@ -28,6 +29,7 @@ requirements:
   run:
     - python
     - numpy
+    - llvm-openmp  # [osx]
 
 test:
   requires:
