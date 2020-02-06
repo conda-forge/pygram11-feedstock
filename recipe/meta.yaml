@@ -23,18 +23,18 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy
+    - numpy >=1.14
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
   run:
     - python
-    - numpy
     - llvm-openmp  # [osx]
+    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
     - pytest
-    - numpy
+    - numpy >=1.14
   source_files:
     - tests
   imports:
