@@ -10,7 +10,7 @@ source:
   sha256: 0303de5bb5723c2297522a23fcf62b4b5a72ed0111329a0c2def5c36dbc9591b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py2k]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -23,7 +23,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy >=1.14
+    - numpy >=1.16
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
   run:
@@ -34,7 +34,7 @@ requirements:
 test:
   requires:
     - pytest
-    - numpy >=1.14
+    - numpy >=1.16
   source_files:
     - tests
   imports:
