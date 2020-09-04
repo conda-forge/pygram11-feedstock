@@ -1,5 +1,5 @@
 {% set name = "pygram11" %}
-{% set version = "0.10.1.dev0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5c36a1d0f0485286f741f9f1f573bbb97691833b2704396e72f152d571c238c1
+  sha256: bc154cc0775fee91b07157b3b4c522a09c347b84a5e0c0e35c8f86e3e5e6cad4
 
 build:
   number: 0
