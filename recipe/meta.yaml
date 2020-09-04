@@ -1,5 +1,5 @@
 {% set name = "pygram11" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0303de5bb5723c2297522a23fcf62b4b5a72ed0111329a0c2def5c36dbc9591b
+  sha256: bc154cc0775fee91b07157b3b4c522a09c347b84a5e0c0e35c8f86e3e5e6cad4
 
 build:
   number: 0
@@ -19,13 +19,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   host:
     - python
     - pip
     - setuptools
-    - numpy >=1.14
+    - numpy >=1.16
     - llvm-openmp  # [osx]
-    - libgomp  # [linux]
+    - libgomp      # [linux]
   run:
     - python
     - llvm-openmp  # [osx]
@@ -34,7 +35,7 @@ requirements:
 test:
   requires:
     - pytest
-    - numpy >=1.14
+    - numpy >=1.16
   source_files:
     - tests
   imports:
