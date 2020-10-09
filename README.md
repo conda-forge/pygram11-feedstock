@@ -5,9 +5,13 @@ Home: http://github.com/douglasdavis/pygram11
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygram11-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple and fast histogramming in Python via pybind11 and OpenMP
+
+Development: https://github.com/douglasdavis/pygram11
+
+Documentation: https://pygram11.readthedocs.io/
 
 Simple and fast histogramming with a NumPy like API, built on pybind11 and
 accelerated with OpenMP.
