@@ -1,5 +1,5 @@
 {% set name = "pygram11" %}
-{% set version = "0.12.2" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 61b67f64d2ce126d5ddc799385317f56dbc01d76381f953916a1be344adcdbbe
+  sha256: 8cc6b27a558385f99b61d45db66c814604e3f3006ebf0744f362aaa913e69176
 
 build:
   number: 0
@@ -24,6 +24,9 @@ requirements:
     - python
     - pip
     - setuptools
+    - scikit-build
+    - cmake >=3.18
+    - ninja
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
   run:
@@ -32,14 +35,8 @@ requirements:
     - numpy
 
 test:
-  requires:
-    - pytest
-  source_files:
-    - tests
   imports:
     - {{ name }}
-  commands:
-    - pytest --ignore=extern
 
 about:
   home: http://github.com/douglasdavis/{{ name }}
