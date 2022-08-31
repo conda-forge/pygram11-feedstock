@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<38 or win or python_impl == 'pypy']
+  skip: true  # [py<38 or python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
