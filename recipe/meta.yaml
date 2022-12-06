@@ -16,17 +16,13 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
   host:
     - python
     - pip
-    - setuptools
-    - scikit-build
-    - cmake >=3.18
-    - ninja
+    - scikit-build-core >=0.1.0
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
   run:
