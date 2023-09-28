@@ -19,12 +19,14 @@ requirements:
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
+    - cmake >=3.15
   host:
     - python
     - pip
     - scikit-build-core >=0.1.0
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
+    - cmake >=3.15
   run:
     - python
     - llvm-openmp  # [osx]
